@@ -1,0 +1,12 @@
+{
+    "builds":[
+        {
+            "src": "endpoints.js",
+            "use":"@now/node"
+        }
+    ],
+    "routes" : [{
+        "src":"/(.*)", 
+        "dest":"endpoints.js"
+    }]
+}

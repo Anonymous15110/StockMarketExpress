@@ -83,3 +83,5 @@ app.post('/loanuserapi', (req, res) => {
 
     
 })
+
+module.exports = app;
