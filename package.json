@@ -4,6 +4,7 @@
   "description": "stockmarketexpress",
   "main": "endpoints.js",
   "scripts": {
+    "start": "node endpoints.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
