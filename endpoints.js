@@ -75,7 +75,7 @@ app.post('/writetofile', (req, res) => {
         }
         // file written successfully
     });
-    res.send('Check');
+    console.log("CHeck");
 })
 
 app.post('/loanuserapi', (req, res) => {
