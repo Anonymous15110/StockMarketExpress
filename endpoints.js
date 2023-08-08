@@ -14,14 +14,13 @@ app.use(bodyParser.urlencoded({
 app.listen(port, ()=>{console.log("Heyyyyy")})
 
 const userdetails = [
-   { id:1, name:"EU 3", password:"stgregorios@eunoia2023", auth:"user" },
-   { id:2, name:"EU 6", password:"cnm@eunoia2023", auth:"user" },
-   { id:3, name:"EU 7", password:"singhaniaschool@eunoia2023", auth:"user" },
-   { id:3, name:"EU 8", password:"lodhaworldschool@eunoia2023", auth:"user" },
+   { id:1, name:"Eunoia Participant 01", password:"EUCode1", auth:"user" },
+   { id:2, name:"Eunoia Participant 02", password:"EUCode2", auth:"user" },
+   { id:3, name:"Eunoia Participant 03", password:"EUCode3", auth:"user" },
    { id:4, name:"Administrator", password:"admin@1234", auth:"admin" },
 ]
 
-const values = [1138, 2015, 714.50, 1267, 408.65, 431.60, 454.90, 300, 827.05, 965];
+const values = [345.44, 168.90, 20.76, 327.44, 69.38, 1736.23, 185.11, 2210.03, 898.98, 348.66, 200.07, 88.76, 178.32, 30.64, 40.50, 658.01, 1115.65, 413.25, 115.2, 85.7, 333.333, 124.32, 20.01, 2001.00,];
 
 let lender, borrower, value;
 let lender2, borrower2;
