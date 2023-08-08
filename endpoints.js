@@ -58,13 +58,6 @@ app.post('/loanadminapi', (req, res) => {
     console.log("Hello");
 })
 
-app.post('/loanadminapi', (req, res) => {
-    lender = req.body.lender;
-    borrower = req.body.borrower;
-    value = req.body.value;
-    console.log("Hello");
-})
-
 const fs = require('fs');
 
 app.post('/writetofile', (req, res) => {
