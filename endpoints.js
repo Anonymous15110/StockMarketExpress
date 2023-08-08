@@ -69,6 +69,12 @@ const fs = require('fs');
 
 app.post('/writetofile', (req, res) => {
     const content = req.body.content;
+    fs.writeFile('EU3.txt', content, err => {
+        if (err) {
+            console.error(err);
+        }
+        // file written successfully
+    });
     res.send('Check');
 })
 
