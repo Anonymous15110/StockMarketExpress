@@ -61,7 +61,6 @@ app.post('/loanadminapi', (req, res) => {
 const fs = require('fs');
 
 app.post('/writetofile', (req, res) => {
-    const content = req.body.content;
     console.log("CHeck");
 })
 
