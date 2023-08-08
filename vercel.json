@@ -11,7 +11,7 @@
     }],
     "headers":[
         {
-            "source":"/(.*)",
+            "src":"/(.*)",
             "headers":[
                 { "key": "Access-Control-Allow-Credetials", "value": "true"},
                 { "key": "Access-Control-Allow-Origin", "value": "*"},
