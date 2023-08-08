@@ -58,12 +58,6 @@ app.post('/loanadminapi', (req, res) => {
     console.log("Hello");
 })
 
-const fs = require('fs');
-
-app.post('/writetofile', (req, res) => {
-    console.log("CHeck");
-})
-
 app.post('/loanuserapi', (req, res) => {
     let flag = req.body.type;
 
