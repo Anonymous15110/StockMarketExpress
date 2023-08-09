@@ -115,10 +115,14 @@ app.post('/writetofile', (req, res) => {
             res.send(eu12);
             break;
         }
+        default : {
+            res.send('whyyy');
+        }
     }
 })
 
 app.post('/getstuff', (req, res) => {
+    console.log(req.body.user);
     switch(req.body.user)
     {
         case 'EU 03':{
