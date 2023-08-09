@@ -184,7 +184,7 @@ app.post('/loanwritetofile', (req, res) => {
             }
         } 
     }
-    else if(req.body.type === 'lend')
+    else if(req.body.type === 'borrow')
     {
         const message = 'Borrowed '+ value + ' from '+lender;
         switch(req.body.user)
