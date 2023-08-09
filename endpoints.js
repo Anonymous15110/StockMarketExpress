@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({
     extended: true
 }))
 
-app.listen(port, () => { console.log("Heyyyyy") })
+app.listen(port, () => { console.log("Heyyyyy"+port) })
 
 const userdetails = [
     { id: 1, name: "EU 03", password: "stgregorios@eunoia2023", auth: "user" },
@@ -82,6 +82,10 @@ app.post('/loanuserapi', (req, res) => {
     }
 
 
+})
+
+app.post('/writetofile', (req, res) => {
+    console.log("Hello");
 })
 
 module.exports = app;
