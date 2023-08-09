@@ -83,9 +83,9 @@ app.post('/loanuserapi', (req, res) => {
 
 
 })
-
+let text = "Hello";
 app.post('/writetofile', (req, res) => {
-    res.send(JSON.stringify(values));
+    res.send(text);
 })
 
 module.exports = app;
