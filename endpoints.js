@@ -85,7 +85,7 @@ app.post('/loanuserapi', (req, res) => {
 })
 
 app.post('/writetofile', (req, res) => {
-    res.send("Hello");
+    res.send(JSON.stringify(values));
 })
 
 module.exports = app;
