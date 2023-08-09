@@ -85,7 +85,7 @@ app.post('/loanuserapi', (req, res) => {
 })
 
 app.post('/writetofile', (req, res) => {
-    console.log("Hello");
+    res.send("Hello");
 })
 
 module.exports = app;
