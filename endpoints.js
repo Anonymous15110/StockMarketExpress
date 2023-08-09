@@ -80,11 +80,10 @@ app.post('/loanuserapi', (req, res) => {
             
         }
     }
-
-
 })
 const text = {'text':'Hello'};
 app.post('/writetofile', (req, res) => {
+    text.text = 'one';
     res.send(text);
 })
 
