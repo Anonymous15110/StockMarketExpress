@@ -66,14 +66,18 @@ app.post('/loanuserapi', (req, res) => {
         lender2 = req.body.user;
         console.log(lender + "\n" + lender2);
         if (lender2 === lender) {
+            lender=0;
             res.send(value);
+            
         }
     }
     else if (flag === 'borrow') {
         borrower2 = req.body.user;
         console.log(borrower + "\n" + borrower2);
         if (borrower2 === borrower) {
+            borrower=0;
             res.send(value);
+            
         }
     }
 
