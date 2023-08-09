@@ -91,27 +91,27 @@ app.post('/writetofile', (req, res) => {
     switch(req.body.user)
     {
         case 'EU 03':{
-            eu3.text += (req.body.message+'\n');
+            eu3.text += (req.body.message+"<br/>");
             res.send(eu3);
             break;
         }
         case 'EU 06':{
-            eu6.text += req.body.message+'\n';
+            eu6.text += req.body.message+"<br/>";
             res.send(eu6);
             break;
         }
         case 'EU 08':{
-            eu8.text += req.body.message+'\n';
+            eu8.text += req.body.message+"<br/>";
             res.send(eu8);
             break;
         }
         case 'EU 11':{
-            eu11.text += req.body.message+'\n';
+            eu11.text += req.body.message+"<br/>";
             res.send(eu11);
             break;
         }
         case 'EU 12':{
-            eu12.text += req.body.message+'\n';
+            eu12.text += req.body.message+"<br/>";
             res.send(eu12);
             break;
         }
@@ -155,27 +155,27 @@ app.post('/loanwritetofile', (req, res) => {
         switch(req.body.user)
         {
             case 'EU 03':{
-                eu3.text += (message+'\n');
+                eu3.text += (message+"<br/>");
                 res.send(eu3);
                 break;
             }
             case 'EU 06':{
-                eu6.text += (message+'\n');
+                eu6.text += (message+"<br/>");
                 res.send(eu6);
                 break;
             }
             case 'EU 08':{
-                eu8.text += (message+'\n');
+                eu8.text += (message+"<br/>");
                 res.send(eu8);
                 break;
             }
             case 'EU 11':{
-                eu11.text += (message+'\n');
+                eu11.text += (message+"<br/>");
                 res.send(eu11);
                 break;
             }
             case 'EU 12':{
-                eu12.text += (message+'\n');
+                eu12.text += (message+"<br/>");
                 res.send(eu12);
                 break;
             }
@@ -190,27 +190,27 @@ app.post('/loanwritetofile', (req, res) => {
         switch(req.body.user)
         {
             case 'EU 03':{
-                eu3.text += (message+'\n');
+                eu3.text += (message+"<br/>");
                 res.send(eu3);
                 break;
             }
             case 'EU 06':{
-                eu6.text += (message+'\n');
+                eu6.text += (message+"<br/>");
                 res.send(eu6);
                 break;
             }
             case 'EU 08':{
-                eu8.text += (message+'\n');
+                eu8.text += (message+"<br/>");
                 res.send(eu8);
                 break;
             }
             case 'EU 11':{
-                eu11.text += (message+'\n');
+                eu11.text += (message+"<br/>");
                 res.send(eu11);
                 break;
             }
             case 'EU 12':{
-                eu12.text += (message+'\n');
+                eu12.text += (message+"<br/>");
                 res.send(eu12);
                 break;
             }
