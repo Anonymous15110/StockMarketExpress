@@ -118,7 +118,7 @@ app.post('/writetofile', (req, res) => {
     }
 })
 
-app.get('/getstuff', (req, res) => {
+app.post('/getstuff', (req, res) => {
     switch(req.body.user)
     {
         case 'EU 03':{
