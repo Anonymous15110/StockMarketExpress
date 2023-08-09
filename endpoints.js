@@ -83,7 +83,7 @@ app.post('/loanuserapi', (req, res) => {
 
 
 })
-let text = "Hello";
+const text = {'text':'Hello'};
 app.post('/writetofile', (req, res) => {
     res.send(text);
 })
