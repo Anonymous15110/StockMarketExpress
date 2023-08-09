@@ -88,4 +88,8 @@ app.post('/writetofile', (req, res) => {
     res.send(text);
 })
 
+app.get('/writetofile', (req, res) => {
+    res.send(text);
+})
+
 module.exports = app;
