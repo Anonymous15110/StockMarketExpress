@@ -81,14 +81,67 @@ app.post('/loanuserapi', (req, res) => {
         }
     }
 })
-const text = {'text':'Hello'};
+const eu3 = {'text':'Hello'};
+const eu6 = {'text':'Hello'};
+const eu8 = {'text':'Hello'};
+const eu11 = {'text':'Hello'};
+const eu12 = {'text':'Hello'};
+
 app.post('/writetofile', (req, res) => {
-    text.text = 'one';
-    res.send(text);
+    switch(req.body.user)
+    {
+        case 'EU 03':{
+            eu3.text = req.body.message;
+            res.send(eu3);
+            break;
+        }
+        case 'EU 06':{
+            eu6.text = req.body.message;
+            res.send(eu6);
+            break;
+        }
+        case 'EU 08':{
+            eu8.text = req.body.message;
+            res.send(eu8);
+            break;
+        }
+        case 'EU 11':{
+            eu11.text = req.body.message;
+            res.send(eu11);
+            break;
+        }
+        case 'EU 12':{
+            eu12.text = req.body.message;
+            res.send(eu12);
+            break;
+        }
+    }
 })
 
-app.get('/writetofile', (req, res) => {
-    res.send(text);
+app.get('/getstuff', (req, res) => {
+    switch(req.body.user)
+    {
+        case 'EU 03':{
+            res.send(eu3);
+            break;
+        }
+        case 'EU 06':{
+            res.send(eu6);
+            break;
+        }
+        case 'EU 08':{
+            res.send(eu8);
+            break;
+        }
+        case 'EU 11':{
+            res.send(eu11);
+            break;
+        }
+        case 'EU 12':{
+            res.send(eu12);
+            break;
+        }
+    }
 })
 
 module.exports = app;
