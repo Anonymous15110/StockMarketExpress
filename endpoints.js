@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({
     extended: true
 }))
 
-app.listen(port, () => { console.log("Heyyyyy"+port) })
+app.listen(port, () => { console.log("Heyyyyy" + port) })
 
 const userdetails = [
     { id: 1, name: "EU 03", password: "stgregorios@eunoia2023", auth: "user" },
@@ -66,56 +66,55 @@ app.post('/loanuserapi', (req, res) => {
         lender2 = req.body.user;
         console.log(lender + "\n" + lender2);
         if (lender2 === lender) {
-            lender=0;
+            lender = 0;
             res.send(value);
-            
+
         }
     }
     else if (flag === 'borrow') {
         borrower2 = req.body.user;
         console.log(borrower + "\n" + borrower2);
         if (borrower2 === borrower) {
-            borrower=0;
+            borrower = 0;
             res.send(value);
-            
+
         }
     }
 })
-const eu3 = {'text':''};
-const eu6 = {'text':''};
-const eu8 = {'text':''};
-const eu11 = {'text':''};
-const eu12 = {'text':''};
+const eu3 = { 'text': '' };
+const eu6 = { 'text': '' };
+const eu8 = { 'text': '' };
+const eu11 = { 'text': '' };
+const eu12 = { 'text': '' };
 
 app.post('/writetofile', (req, res) => {
-    switch(req.body.user)
-    {
-        case 'EU 03':{
-            eu3.text += (req.body.message+"<br/>");
+    switch (req.body.user) {
+        case 'EU 03': {
+            eu3.text += (req.body.message + "<br/>");
             res.send(eu3);
             break;
         }
-        case 'EU 06':{
-            eu6.text += req.body.message+"<br/>";
+        case 'EU 06': {
+            eu6.text += req.body.message + "<br/>";
             res.send(eu6);
             break;
         }
-        case 'EU 08':{
-            eu8.text += req.body.message+"<br/>";
+        case 'EU 08': {
+            eu8.text += req.body.message + "<br/>";
             res.send(eu8);
             break;
         }
-        case 'EU 11':{
-            eu11.text += req.body.message+"<br/>";
+        case 'EU 11': {
+            eu11.text += req.body.message + "<br/>";
             res.send(eu11);
             break;
         }
-        case 'EU 12':{
-            eu12.text += req.body.message+"<br/>";
+        case 'EU 12': {
+            eu12.text += req.body.message + "<br/>";
             res.send(eu12);
             break;
         }
-        default : {
+        default: {
             res.send('whyyy');
         }
     }
@@ -123,25 +122,24 @@ app.post('/writetofile', (req, res) => {
 
 app.post('/getstuff', (req, res) => {
     console.log(req.body.user);
-    switch(req.body.user)
-    {
-        case 'EU 03':{
+    switch (req.body.user) {
+        case 'EU 03': {
             res.send(eu3);
             break;
         }
-        case 'EU 06':{
+        case 'EU 06': {
             res.send(eu6);
             break;
         }
-        case 'EU 08':{
+        case 'EU 08': {
             res.send(eu8);
             break;
         }
-        case 'EU 11':{
+        case 'EU 11': {
             res.send(eu11);
             break;
         }
-        case 'EU 12':{
+        case 'EU 12': {
             res.send(eu12);
             break;
         }
@@ -149,76 +147,80 @@ app.post('/getstuff', (req, res) => {
 })
 
 app.post('/loanwritetofile', (req, res) => {
-    if(req.body.type === 'lend')
-    {
-        const message = 'Loaned '+ value + ' to '+borrower;
-        switch(req.body.user)
-        {
-            case 'EU 03':{
-                eu3.text += (message+"<br/>");
+    if (req.body.type === 'lend') {
+        const message = 'Loaned ' + value + ' to ' + borrower;
+        switch (req.body.user) {
+            case 'EU 03': {
+                eu3.text += (message + "<br/>");
                 res.send(eu3);
                 break;
             }
-            case 'EU 06':{
-                eu6.text += (message+"<br/>");
+            case 'EU 06': {
+                eu6.text += (message + "<br/>");
                 res.send(eu6);
                 break;
             }
-            case 'EU 08':{
-                eu8.text += (message+"<br/>");
+            case 'EU 08': {
+                eu8.text += (message + "<br/>");
                 res.send(eu8);
                 break;
             }
-            case 'EU 11':{
-                eu11.text += (message+"<br/>");
+            case 'EU 11': {
+                eu11.text += (message + "<br/>");
                 res.send(eu11);
                 break;
             }
-            case 'EU 12':{
-                eu12.text += (message+"<br/>");
+            case 'EU 12': {
+                eu12.text += (message + "<br/>");
                 res.send(eu12);
                 break;
             }
-            default : {
+            default: {
                 res.send('whyyy');
             }
-        } 
+        }
     }
-    else if(req.body.type === 'borrow')
-    {
-        const message = 'Borrowed '+ value + ' from '+lender;
-        switch(req.body.user)
-        {
-            case 'EU 03':{
-                eu3.text += (message+"<br/>");
+    else if (req.body.type === 'borrow') {
+        const message = 'Borrowed ' + value + ' from ' + lender;
+        switch (req.body.user) {
+            case 'EU 03': {
+                eu3.text += (message + "<br/>");
                 res.send(eu3);
                 break;
             }
-            case 'EU 06':{
-                eu6.text += (message+"<br/>");
+            case 'EU 06': {
+                eu6.text += (message + "<br/>");
                 res.send(eu6);
                 break;
             }
-            case 'EU 08':{
-                eu8.text += (message+"<br/>");
+            case 'EU 08': {
+                eu8.text += (message + "<br/>");
                 res.send(eu8);
                 break;
             }
-            case 'EU 11':{
-                eu11.text += (message+"<br/>");
+            case 'EU 11': {
+                eu11.text += (message + "<br/>");
                 res.send(eu11);
                 break;
             }
-            case 'EU 12':{
-                eu12.text += (message+"<br/>");
+            case 'EU 12': {
+                eu12.text += (message + "<br/>");
                 res.send(eu12);
                 break;
             }
-            default : {
+            default: {
                 res.send('whyyy');
             }
-        } 
+        }
     }
+})
+
+app.get('/hewhomustnotbenamed', (req, res) => {
+    eu3 = { 'text': '' };
+    eu6 = { 'text': '' };
+    eu8 = { 'text': '' };
+    eu11 = { 'text': '' };
+    eu12 = { 'text': '' };
 })
 
 module.exports = app;
