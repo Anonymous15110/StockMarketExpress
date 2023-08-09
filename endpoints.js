@@ -91,27 +91,27 @@ app.post('/writetofile', (req, res) => {
     switch(req.body.user)
     {
         case 'EU 03':{
-            eu3.text += req.body.message;
+            eu3.text += (req.body.message+'\n');
             res.send(eu3);
             break;
         }
         case 'EU 06':{
-            eu6.text += req.body.message;
+            eu6.text += req.body.message+'\n';
             res.send(eu6);
             break;
         }
         case 'EU 08':{
-            eu8.text += req.body.message;
+            eu8.text += req.body.message+'\n';
             res.send(eu8);
             break;
         }
         case 'EU 11':{
-            eu11.text += req.body.message;
+            eu11.text += req.body.message+'\n';
             res.send(eu11);
             break;
         }
         case 'EU 12':{
-            eu12.text += req.body.message;
+            eu12.text += req.body.message+'\n';
             res.send(eu12);
             break;
         }
@@ -155,27 +155,27 @@ app.post('/loanwritetofile', (req, res) => {
         switch(req.body.user)
         {
             case 'EU 03':{
-                eu3.text += message;
+                eu3.text += (message+'\n');
                 res.send(eu3);
                 break;
             }
             case 'EU 06':{
-                eu6.text += message;
+                eu6.text += (message+'\n');
                 res.send(eu6);
                 break;
             }
             case 'EU 08':{
-                eu8.text += message;
+                eu8.text += (message+'\n');
                 res.send(eu8);
                 break;
             }
             case 'EU 11':{
-                eu11.text += message;
+                eu11.text += (message+'\n');
                 res.send(eu11);
                 break;
             }
             case 'EU 12':{
-                eu12.text += message;
+                eu12.text += (message+'\n');
                 res.send(eu12);
                 break;
             }
@@ -190,27 +190,27 @@ app.post('/loanwritetofile', (req, res) => {
         switch(req.body.user)
         {
             case 'EU 03':{
-                eu3.text += message;
+                eu3.text += (message+'\n');
                 res.send(eu3);
                 break;
             }
             case 'EU 06':{
-                eu6.text += message;
+                eu6.text += (message+'\n');
                 res.send(eu6);
                 break;
             }
             case 'EU 08':{
-                eu8.text += message;
+                eu8.text += (message+'\n');
                 res.send(eu8);
                 break;
             }
             case 'EU 11':{
-                eu11.text += message;
+                eu11.text += (message+'\n');
                 res.send(eu11);
                 break;
             }
             case 'EU 12':{
-                eu12.text += message;
+                eu12.text += (message+'\n');
                 res.send(eu12);
                 break;
             }
