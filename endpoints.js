@@ -14,11 +14,12 @@ app.use(bodyParser.urlencoded({
 app.listen(port, () => { console.log("Heyyyyy") })
 
 const userdetails = [
-    { id: 1, name: "EU 3", password: "stgregorios@eunoia2023", auth: "user" },
-    { id: 2, name: "EU 6", password: "cnm@eunoia2023", auth: "user" },
-    { id: 3, name: "EU 7", password: "singhaniaschool@eunoia2023", auth: "user" },
-    { id: 3, name: "EU 8", password: "lodhaworldschool@eunoia2023", auth: "user" },
-    { id: 4, name: "Administrator", password: "admin@1234", auth: "admin" },
+    { id: 1, name: "EU 03", password: "stgregorios@eunoia2023", auth: "user" },
+    { id: 2, name: "EU 06", password: "cnm@eunoia2023", auth: "user" },
+    { id: 3, name: "EU 08", password: "lodhaworldschool@eunoia2023", auth: "user" },
+    { id: 4, name: "EU 11", password: "universalhigh@eunoia2023", auth: "user" },
+    { id: 5, name: "EU 12", password: "bombayscottish@eunoia2023", auth: "user" },
+    { id: 6, name: "Administrator", password: "admin@1234", auth: "admin" },
 ]
 
 const values = [1138, 2015, 714.50, 1267, 408.65, 431.60, 454.90, 300, 827.05, 965];
