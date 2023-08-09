@@ -81,37 +81,37 @@ app.post('/loanuserapi', (req, res) => {
         }
     }
 })
-const eu3 = {'text':'Hello'};
-const eu6 = {'text':'Hello'};
-const eu8 = {'text':'Hello'};
-const eu11 = {'text':'Hello'};
-const eu12 = {'text':'Hello'};
+const eu3 = {'text':''};
+const eu6 = {'text':''};
+const eu8 = {'text':''};
+const eu11 = {'text':''};
+const eu12 = {'text':''};
 
 app.post('/writetofile', (req, res) => {
     switch(req.body.user)
     {
         case 'EU 03':{
-            eu3.text = req.body.message;
+            eu3.text += req.body.message;
             res.send(eu3);
             break;
         }
         case 'EU 06':{
-            eu6.text = req.body.message;
+            eu6.text += req.body.message;
             res.send(eu6);
             break;
         }
         case 'EU 08':{
-            eu8.text = req.body.message;
+            eu8.text += req.body.message;
             res.send(eu8);
             break;
         }
         case 'EU 11':{
-            eu11.text = req.body.message;
+            eu11.text += req.body.message;
             res.send(eu11);
             break;
         }
         case 'EU 12':{
-            eu12.text = req.body.message;
+            eu12.text += req.body.message;
             res.send(eu12);
             break;
         }
@@ -145,6 +145,79 @@ app.post('/getstuff', (req, res) => {
             res.send(eu12);
             break;
         }
+    }
+})
+
+app.post('/loanwritetofile', (req, res) => {
+    if(req.body.type === 'lend')
+    {
+        const message = 'Loaned '+ value + ' to '+borrower;
+        switch(req.body.user)
+        {
+            case 'EU 03':{
+                eu3.text += message;
+                res.send(eu3);
+                break;
+            }
+            case 'EU 06':{
+                eu6.text += message;
+                res.send(eu6);
+                break;
+            }
+            case 'EU 08':{
+                eu8.text += message;
+                res.send(eu8);
+                break;
+            }
+            case 'EU 11':{
+                eu11.text += message;
+                res.send(eu11);
+                break;
+            }
+            case 'EU 12':{
+                eu12.text += message;
+                res.send(eu12);
+                break;
+            }
+            default : {
+                res.send('whyyy');
+            }
+        } 
+    }
+    else if(req.body.type === 'lend')
+    {
+        const message = 'Borrowed '+ value + ' from '+lender;
+        switch(req.body.user)
+        {
+            case 'EU 03':{
+                eu3.text += message;
+                res.send(eu3);
+                break;
+            }
+            case 'EU 06':{
+                eu6.text += message;
+                res.send(eu6);
+                break;
+            }
+            case 'EU 08':{
+                eu8.text += message;
+                res.send(eu8);
+                break;
+            }
+            case 'EU 11':{
+                eu11.text += message;
+                res.send(eu11);
+                break;
+            }
+            case 'EU 12':{
+                eu12.text += message;
+                res.send(eu12);
+                break;
+            }
+            default : {
+                res.send('whyyy');
+            }
+        } 
     }
 })
 
